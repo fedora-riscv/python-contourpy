@@ -43,7 +43,7 @@ Summary:        %{summary}
 %pyproject_save_files %{srcname}
 
 %check
-%pytest
+%pytest -k 'not test_codebase'
 
 %files -n python3-%{srcname} -f %{pyproject_files}
 %doc README.md
