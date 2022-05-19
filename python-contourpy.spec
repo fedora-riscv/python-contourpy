@@ -7,7 +7,7 @@ Summary:        Python library for calculating contours in 2D quadrilateral grid
 
 License:        BSD
 URL:            https://contourpy.readthedocs.io/
-Source0:        https://github.com/contourpy/contourpy/archive/v%{version}/%{srcname}-%{version}.tar.gz
+Source0:        %pypi_source
 
 BuildRequires:  python3-devel
 BuildRequires:  gcc-c++
