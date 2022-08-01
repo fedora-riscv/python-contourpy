@@ -3,15 +3,13 @@
 %global srcname contourpy
 
 Name:           python-%{srcname}
-Version:        1.0.3
+Version:        1.0.4
 Release:        %autorelease
 Summary:        Python library for calculating contours in 2D quadrilateral grids
 
 License:        BSD
 URL:            https://contourpy.readthedocs.io/
-Source0:        %pypi_source
-# https://github.com/contourpy/contourpy/pull/146
-Patch0001:      0001-Split-styling-dependencies-out-of-test-requirements.patch
+Source0:        %pypi_source %{srcname}
 
 BuildRequires:  python3-devel
 BuildRequires:  gcc-c++
@@ -40,7 +38,7 @@ sed -i -e '/matplotlib/d' setup.cfg
 %endif
 
 %generate_buildrequires
-%pyproject_buildrequires -r -x bokeh,test
+%pyproject_buildrequires -r -x bokeh,test-no-codebase
 
 %build
 %pyproject_wheel
