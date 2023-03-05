@@ -1,10 +1,10 @@
-%bcond_with bootstrap
+%bcond_without bootstrap
 
 %global srcname contourpy
 
 Name:           python-%{srcname}
 Version:        1.0.7
-Release:        %autorelease
+Release:        %autorelease -e rv64
 Summary:        Python library for calculating contours in 2D quadrilateral grids
 
 License:        BSD
